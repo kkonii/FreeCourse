@@ -2,8 +2,12 @@ package kkonii.week1;
 
 import java.util.List;
 public class Problem1 {
-    public static String solution(List<Integer> player) {
+    static Range range = new Range();
+    static Calculation cal = new Calculation();
+    static Result result = new Result();
 
+    public static Integer solution(List<Integer> pobi, List<Integer> crong) {
+        return result.game(pobi, crong);
     }
     static class Range{
         public boolean range(List<Integer> player){
@@ -70,6 +74,25 @@ public class Problem1 {
 
         public Integer bigger(List<Integer> player){
             return compare(player.get(0)) > compare(player.get(1)) ? compare(player.get(0)) : compare(player.get(1));
+        }
+    }
+
+    static class Result{
+        public Integer game(List<Integer> pobi, List<Integer> crong){
+            Integer result = cal.bigger(pobi) - cal.bigger(crong);
+
+            if(!range.range(pobi) || !range.range(crong)) {
+                return -1;
+            }
+
+            if(result > 0) {
+                return 1;
+            }
+            if(result < 0) {
+                return 2;
+            }
+
+            return 0;
         }
     }
 }
