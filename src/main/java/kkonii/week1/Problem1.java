@@ -31,4 +31,35 @@ public class Problem1 {
             return true;
         }
     }
+
+    static class Calculation{
+
+        private Integer plus(Integer page){
+            Integer sum = 0;
+
+            sum += (page / 100);
+            page %= 100;
+
+            sum += (page / 10);
+            page %= 10;
+
+            sum += page;
+
+            return sum;
+        }
+
+        private Integer multiple(Integer page){
+            Integer sum = 1;
+
+            sum *= (page / 100);
+            page %= 100;
+
+            sum *= (page / 10);
+            page %= 10;
+
+            sum *= page;
+
+            return sum;
+        }
+    }
 }
