@@ -33,6 +33,12 @@ public class Problem1 {
     }
 
     static class Calculation{
+        private Integer compare(Integer page){
+            if(plus(page) > multiple(page)) {
+                return plus(page);
+            }
+            return multiple(page);
+        }
 
         private Integer plus(Integer page){
             Integer sum = 0;
@@ -60,6 +66,10 @@ public class Problem1 {
             sum *= page;
 
             return sum;
+        }
+
+        public Integer bigger(List<Integer> player){
+            return compare(player.get(0)) > compare(player.get(1)) ? compare(player.get(0)) : compare(player.get(1));
         }
     }
 }
