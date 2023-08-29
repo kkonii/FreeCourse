@@ -47,13 +47,10 @@ public class Problem1 {
         private Integer plus(Integer page){
             Integer sum = 0;
 
-            sum += (page / 100);
-            page %= 100;
-
-            sum += (page / 10);
-            page %= 10;
-
-            sum += page;
+            while(page/10 != 0){
+                sum += page % 10;
+                page /= 10;
+            }
 
             return sum;
         }
@@ -61,13 +58,10 @@ public class Problem1 {
         private Integer multiple(Integer page){
             Integer sum = 1;
 
-            sum *= (page / 100);
-            page %= 100;
-
-            sum *= (page / 10);
-            page %= 10;
-
-            sum *= page;
+            while(page/10 != 0){
+                sum *= page % 10;
+                page /= 10;
+            }
 
             return sum;
         }
