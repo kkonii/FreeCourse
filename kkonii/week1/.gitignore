@@ -1,7 +1,7 @@
-README.md
+../../README.md
 .gradle
 build/
-!gradle/wrapper/gradle-wrapper.jar
+!kkonii/week1/gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
 
@@ -18,7 +18,7 @@ bin/
 !**/src/test/**/bin/
 
 ### IntelliJ IDEA ###
-.idea
+kkonii/week1/.idea
 *.iws
 *.iml
 *.ipr
