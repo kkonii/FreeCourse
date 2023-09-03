@@ -47,7 +47,7 @@ public class Problem1 {
         private Integer plus(Integer page){
             Integer sum = 0;
 
-            while(page/10 != 0){
+            while(page != 0){
                 sum += page % 10;
                 page /= 10;
             }
@@ -58,7 +58,7 @@ public class Problem1 {
         private Integer multiple(Integer page){
             Integer sum = 1;
 
-            while(page/10 != 0){
+            while(page != 0){
                 sum *= page % 10;
                 page /= 10;
             }
