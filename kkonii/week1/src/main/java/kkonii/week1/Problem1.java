@@ -2,18 +2,18 @@ package kkonii.week1;
 
 import java.util.List;
 public class Problem1 {
-    static Range range = new Range();
+    static Valid range = new Valid();
     static Calculation cal = new Calculation();
     static Result result = new Result();
 
     public static Integer solution(List<Integer> pobi, List<Integer> crong) {
         return result.game(pobi, crong);
     }
-    static class Range{
+    static class Valid{
         private static final Integer MAX_PAGE = 400;
         private static final Integer MIN_PAGE = 1;
 
-        public boolean range(List<Integer> player){
+        public boolean valid(List<Integer> player){
             return isContinuous(player) && isCorrectRange(player) && isCorrectLength(player);
         }
 
@@ -75,7 +75,7 @@ public class Problem1 {
         public Integer game(List<Integer> pobi, List<Integer> crong){
             Integer result = cal.getMaxValue(pobi) - cal.getMaxValue(crong);
 
-            if(!range.range(pobi) || !range.range(crong)) {
+            if(!range.valid(pobi) || !range.valid(crong)) {
                 return -1;
             }
 
