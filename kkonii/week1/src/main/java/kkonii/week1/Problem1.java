@@ -41,10 +41,7 @@ public class Problem1 {
 
     static class Calculation{
         private Integer compare(Integer page){
-            if(plus(page) > multiple(page)) {
-                return plus(page);
-            }
-            return multiple(page);
+            return Math.max(plus(page),multiple(page));
         }
 
         private Integer plus(Integer page){
