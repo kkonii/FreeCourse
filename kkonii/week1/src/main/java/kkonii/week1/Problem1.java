@@ -10,12 +10,15 @@ public class Problem1 {
         return result.game(pobi, crong);
     }
     static class Range{
+        private static final Integer MAX_PAGE = 400;
+        private static final Integer MIN_PAGE = 1;
+
         public boolean range(List<Integer> player){
             return isContinuous(player) && isCorrectRange(player) && isCorrectLength(player);
         }
 
         private boolean isCorrectRange(List<Integer> player){
-            if(player.get(0) > 1 && player.get(0) < 400 && player.get(1) > 1 && player.get(1) < 400) {
+            if(player.get(0) > MIN_PAGE && player.get(0) < MAX_PAGE && player.get(1) > MIN_PAGE && player.get(1) < MAX_PAGE) {
                 return true;
             }
             return false;
