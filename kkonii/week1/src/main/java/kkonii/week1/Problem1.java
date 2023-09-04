@@ -40,7 +40,7 @@ public class Problem1 {
     }
 
     static class Calculation{
-        private Integer compare(Integer page){
+        private Integer compareValues(Integer page){
             return Math.max(plus(page),multiple(page));
         }
 
@@ -66,14 +66,14 @@ public class Problem1 {
             return sum;
         }
 
-        public Integer bigger(List<Integer> player){
-            return compare(player.get(0)) > compare(player.get(1)) ? compare(player.get(0)) : compare(player.get(1));
+        public Integer getMaxValue(List<Integer> player){
+            return compareValues(player.get(0)) > compareValues(player.get(1)) ? compareValues(player.get(0)) : compareValues(player.get(1));
         }
     }
 
     static class Result{
         public Integer game(List<Integer> pobi, List<Integer> crong){
-            Integer result = cal.bigger(pobi) - cal.bigger(crong);
+            Integer result = cal.getMaxValue(pobi) - cal.getMaxValue(crong);
 
             if(!range.range(pobi) || !range.range(crong)) {
                 return -1;
