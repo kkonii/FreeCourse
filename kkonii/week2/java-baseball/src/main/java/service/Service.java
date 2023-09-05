@@ -13,7 +13,7 @@ public class Service {
     Computer computer = null;
     User user = new User();
 
-    private Integer[] getUserInput() throws IllegalArgumentException{
+    private Integer[] getUserInput(){
         Input.requestUserInput();
         String input = readLine();
 
@@ -25,7 +25,7 @@ public class Service {
             System.out.println(e.getMessage());
             System.out.println("게임을 종료합니다.");
         }
-        return null;
+        return new Integer[3];
     }
 
     private Integer[] getRandomNumbers(){
