@@ -5,15 +5,18 @@ public class Computer {
     private Integer ballCount;
     private Integer[] balls;
 
-    public Computer(Integer[] balls){
-        this.balls = balls;
-    }
-
     public void resetComputer(){
         setStrikeCount(0);
         setBallCount(0);
     }
 
+    public void increaseStrike(){
+        strikeCount++;
+    }
+
+    public void increaseBall(){
+        ballCount++;
+    }
     public Integer getStrikeCount() {
         return strikeCount;
     }
@@ -32,5 +35,9 @@ public class Computer {
 
     public Integer[] getBalls() {
         return balls;
+    }
+
+    public void setBalls(Integer[] balls) {
+        this.balls = balls;
     }
 }
