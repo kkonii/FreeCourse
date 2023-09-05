@@ -1,5 +1,6 @@
 package service;
 
+import camp.nextstep.edu.missionutils.Console;
 import domain.Computer;
 import domain.User;
 import util.ParsingUtil;
@@ -83,5 +84,9 @@ public class Service {
         }
 
         Result.exitGameMessage();
+    }
+
+    public String getUserRestartInput(){
+        return Console.readLine();
     }
 }

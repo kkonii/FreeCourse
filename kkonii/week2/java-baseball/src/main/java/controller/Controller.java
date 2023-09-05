@@ -9,6 +9,12 @@ import view.Result;
 public class Controller {
     private Service service = new Service();
 
+    public void game(){
+        startGame();
+        playGame();
+        exitGame();
+    }
+
     private void startGame() throws IllegalArgumentException{
         Guide.startMessage();
 
@@ -17,5 +23,11 @@ public class Controller {
 
     private void playGame(){
         service.play();
+    }
+
+    private void exitGame(){
+        Input.requestRestartInput();
+
+        if (service.getUserRestartInput() == "1") game();
     }
 }
