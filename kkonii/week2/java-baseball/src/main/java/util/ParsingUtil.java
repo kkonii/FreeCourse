@@ -1,8 +1,10 @@
 package util;
 
 public class ParsingUtil {
+    private static final Integer LENGTH = 3;
+
     public static Integer[] parseUserInput(String input, boolean isCorrect){
-        Integer[] numbers = new Integer[3];
+        Integer[] numbers = new Integer[LENGTH];
 
         for(int i=0;i<numbers.length;i++){
             numbers[i] = charToInteger(input, isCorrect);
@@ -26,7 +28,7 @@ public class ParsingUtil {
         return isCorrectRegex(input) && isCorrectLength(input);
     }
     private static boolean isCorrectLength(String input) throws IllegalArgumentException{
-        if (input.length() != 3) throw new IllegalArgumentException("3자리 숫자를 입력하지 않았습니다.");
+        if (input.length() != LENGTH) throw new IllegalArgumentException("3자리 숫자를 입력하지 않았습니다.");
         return true;
     }
 
