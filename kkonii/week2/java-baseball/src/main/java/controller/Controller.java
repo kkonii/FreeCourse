@@ -28,6 +28,6 @@ public class Controller {
     private void exitGame(){
         Input.requestRestartInput();
 
-        if (service.getUserRestartInput() == "1") game();
+        if (service.getUserRestartInput().equals("1")) game();
     }
 }
