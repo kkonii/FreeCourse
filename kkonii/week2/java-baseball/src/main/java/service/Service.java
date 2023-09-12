@@ -3,6 +3,7 @@ package service;
 import camp.nextstep.edu.missionutils.Console;
 import domain.Computer;
 import domain.User;
+import util.InputException;
 import util.ParsingUtil;
 import util.RandomUtil;
 import view.Guide;
@@ -23,7 +24,7 @@ public class Service {
         String input = readLine();
 
         try{
-            boolean isCorrect = ParsingUtil.isCorrectInput(input);
+            boolean isCorrect = InputException.isCorrectInput(input);
 
             return ParsingUtil.parseUserInput(input, isCorrect);
         }catch (IllegalArgumentException e){
