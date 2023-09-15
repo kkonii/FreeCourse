@@ -1,6 +1,15 @@
 package valid;
 
 public class ValidMessage {
+    public static void viewMessage(String money) {
+        validateType(money);
+
+        Integer price = Integer.valueOf(money);
+
+        validateLimit(price);
+        validateUnit(price);
+    }
+
     private static void validateLimit(Integer price) {
         if (price < 1000) {
             throw new IllegalArgumentException("[ERROR] 최소 입력 금액은 1000원 입니다.");
