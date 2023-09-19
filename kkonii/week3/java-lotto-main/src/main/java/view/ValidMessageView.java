@@ -1,6 +1,6 @@
-package valid;
+package view;
 
-public class ValidMessage {
+public class ValidMessageView {
     public static void viewMessage(String money) {
         validateType(money);
 
