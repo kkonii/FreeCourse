@@ -30,7 +30,7 @@ public class ValidMessageView {
         }
     }
 
-    public static void viewSplitRegexMessage(String inputValue) {
+    private static void viewSplitRegexMessage(String inputValue) {
         String regex = "\\d{1,2},\\d{1,2},\\d{1,2},\\d{1,2},\\d{1,2},\\d{1,2}";
 
         if (!inputValue.matches(regex)) {
