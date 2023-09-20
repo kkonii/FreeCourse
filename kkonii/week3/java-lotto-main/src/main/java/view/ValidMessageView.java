@@ -1,6 +1,10 @@
 package view;
 
+import util.ParsingUtil;
+
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class ValidMessageView {
     public static void viewMessage(String money) {
@@ -43,6 +47,14 @@ public class ValidMessageView {
     private static void viewNumberOfInputMessage(List<Integer> inputs) {
         if (inputs.size() != 6) {
             throw new IllegalArgumentException("[ERROR] 로또 번호의 입력 갯수는 6개 입니다.");
+        }
+    }
+
+    private static void viewRangeOfInputMessage(List<Integer> inputs) {
+        for (Integer input : inputs) {
+            if (input < 1 || input > 45) {
+                throw new IllegalArgumentException("[ERROR] 1-45 사이의 숫자를 입력해 주세요.");
+            }
         }
     }
 }
