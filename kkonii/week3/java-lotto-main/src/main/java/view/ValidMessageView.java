@@ -1,5 +1,7 @@
 package view;
 
+import java.util.List;
+
 public class ValidMessageView {
     public static void viewMessage(String money) {
         validateType(money);
@@ -35,6 +37,12 @@ public class ValidMessageView {
 
         if (!inputValue.matches(regex)) {
             throw new IllegalArgumentException("[ERROR] 올바른 입력형식이 아닙니다. ','로 구분해서 입력해주세요.");
+        }
+    }
+
+    private static void viewNumberOfInputMessage(List<Integer> inputs) {
+        if (inputs.size() != 6) {
+            throw new IllegalArgumentException("[ERROR] 로또 번호의 입력 갯수는 6개 입니다.");
         }
     }
 }
