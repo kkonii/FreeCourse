@@ -29,4 +29,12 @@ public class ValidMessageView {
             throw new IllegalArgumentException("[ERROR] 금액은 숫자 이외의 문자는 입력할 수 없습니다.");
         }
     }
+
+    public static void viewSplitRegexMessage(String inputValue) {
+        String regex = "\\d{1,2},\\d{1,2},\\d{1,2},\\d{1,2},\\d{1,2},\\d{1,2}";
+
+        if (!inputValue.matches(regex)) {
+            throw new IllegalArgumentException("[ERROR] 올바른 입력형식이 아닙니다. ','로 구분해서 입력해주세요.");
+        }
+    }
 }
