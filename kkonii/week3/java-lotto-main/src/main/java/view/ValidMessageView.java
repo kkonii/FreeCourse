@@ -57,4 +57,12 @@ public class ValidMessageView {
             }
         }
     }
+
+    private static void viewDuplicateExceptionMessage(List<Integer> inputs) {
+        Set<Integer> inputSet = new HashSet<>(inputs);
+
+        if (inputSet.size() != inputs.size()) {
+            throw new IllegalArgumentException("[ERROR] 중복되는 숫자는 입력할 수 없습니다.");
+        }
+    }
 }
