@@ -65,4 +65,12 @@ public class ValidMessageView {
             throw new IllegalArgumentException("[ERROR] 중복되는 숫자는 입력할 수 없습니다.");
         }
     }
+
+    private static void viewBonusTypeExceptionMessage(String bonus) {
+        String regex = "^[0-9]*$";
+
+        if (!bonus.matches(regex)) {
+            throw new IllegalArgumentException("[ERROR] 숫자만 입력 가능합니다.");
+        }
+    }
 }
