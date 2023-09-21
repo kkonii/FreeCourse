@@ -73,4 +73,10 @@ public class ValidMessageView {
             throw new IllegalArgumentException("[ERROR] 숫자만 입력 가능합니다.");
         }
     }
+
+    private static void viewBonusRangeExceptionMessage(Integer bonus) {
+        if (bonus < 1 || bonus > 45) {
+            throw new IllegalArgumentException("[ERROR] 1-45 사이의 숫자를 입력해 주세요.");
+        }
+    }
 }
