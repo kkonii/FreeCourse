@@ -7,7 +7,7 @@ public class Validator {
 
     public void validatePrice(String money) {
         if (!money.matches(regex)) {
-            throw new IllegalArgumentException(ExceptionMessage.LOTTO_TYPE_ERROR.getMessage());
+            throw new IllegalArgumentException(ExceptionMessage.TYPE_ERROR.getMessage());
         }
 
         Integer price = Integer.valueOf(money);
@@ -27,7 +27,5 @@ public class Validator {
         if (!inputValue.matches(regex)) {
             throw new IllegalArgumentException(ExceptionMessage.REGEX_ERROR.getMessage());
         }
-
-
     }
 }
