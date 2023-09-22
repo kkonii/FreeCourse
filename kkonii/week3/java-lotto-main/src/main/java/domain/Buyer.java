@@ -17,6 +17,11 @@ public class Buyer {
         if (bonus < 1 || bonus > 45) {
             throw new IllegalArgumentException(ExceptionMessage.NUMBER_RANGE_ERROR.getMessage());
         }
+
+        //중복되는 숫자 입력 검사
+        if (lotto.contains(bonus)) {
+            throw new IllegalArgumentException(ExceptionMessage.BONUS_NUMBER_DUPLICATE_ERROR.getMessage());
+        }
     }
 
     public void setLotto(List<Integer> lotto) {
