@@ -28,4 +28,10 @@ public class Validator {
             throw new IllegalArgumentException(ExceptionMessage.REGEX_ERROR.getMessage());
         }
     }
+
+    public void validateBonus(String inputValue) {
+        if (!inputValue.matches(regex)) {
+            throw new IllegalArgumentException(ExceptionMessage.TYPE_ERROR.getMessage());
+        }
+    }
 }
